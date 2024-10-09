@@ -13,24 +13,28 @@ const nav = document.querySelector(".nav"),
   totalSection = allSection.length;
 
 for (let i = 0; i < totalNavList; i++) {
-  const a = navList[i].querySelector("a");
-  ['click', 'touchstart'].forEach(eventType => {
-    a.addEventListener(eventType, function (e) {
-      e.preventDefault(); // منع السلوك الافتراضي
-      for (let k = 0; k < totalSection; k++) {
-        allSection[k].classList.remove("back-section");
-      }
-      //Loop for removing active class
-      for (let j = 0; j < totalNavList; j++) {
-        if (navList[j].querySelector("a").classList.contains("active")) {
-          allSection[j].classList.add("back-section");
-        }
-        navList[j].querySelector("a").classList.remove("active");
-      }
-      //Adding active class
-      this.classList.add("active");
-      showSection(this); //Function call
-      //Nav click event - Hiding the nav menu
+  const li = navList[i];
+  const a = li.querySelector("a");
+  
+  ['click', 'touchend'].forEach(eventType => {
+    li.addEventListener(eventType, function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
+      // إزالة الفئة النشطة من جميع الروابط
+      navList.forEach(item => item.querySelector("a").classList.remove("active"));
+      
+      // إضافة الفئة النشطة للرابط الحالي
+      a.classList.add("active");
+      
+      // إخفاء جميع الأقسام
+      allSection.forEach(section => section.classList.remove("active", "back-section"));
+      
+      // عرض القسم المستهدف
+      const target = a.getAttribute("href").split("#")[1];
+      document.querySelector("#" + target).classList.add("active");
+      
+      // إغلاق القائمة الجانبية على الأجهزة الصغيرة
       if (window.innerWidth < 1200) {
         asideSectionTogglerBtn();
       }
