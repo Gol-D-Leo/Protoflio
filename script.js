@@ -32,8 +32,9 @@ function updateNav(element) {
 
 function handleNavClick(e) {
   e.preventDefault();
-  showSection(this);
-  updateNav(this);
+  const clickedElement = e.currentTarget;
+  showSection(clickedElement);
+  updateNav(clickedElement);
   if (window.innerWidth < 1200) {
     asideSectionTogglerBtn();
   }
@@ -42,6 +43,9 @@ function handleNavClick(e) {
 for (let i = 0; i < totalNavList; i++) {
   const a = navList[i].querySelector("a");
   a.addEventListener("click", handleNavClick);
+  a.addEventListener("touchstart", function(e) {
+    e.preventDefault();
+  }, { passive: false });
   a.addEventListener("touchend", handleNavClick);
 }
 
@@ -61,6 +65,9 @@ function asideSectionTogglerBtn() {
 }
 
 navTogglerBtn.addEventListener("click", asideSectionTogglerBtn);
+navTogglerBtn.addEventListener("touchstart", function(e) {
+  e.preventDefault();
+}, { passive: false });
 navTogglerBtn.addEventListener("touchend", asideSectionTogglerBtn);
 
 // Ensure proper initialization on page load
@@ -74,3 +81,8 @@ window.addEventListener('load', function() {
     }
   }
 });
+
+// Prevent default touch behavior to avoid unwanted scrolling
+document.addEventListener('touchmove', function(e) {
+  e.preventDefault();
+}, { passive: false });
