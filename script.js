@@ -28,11 +28,17 @@ for (let i = 0; i < totalNavList; i++) {
       a.classList.add("active");
       
       // إخفاء جميع الأقسام
-      allSection.forEach(section => section.classList.remove("active", "back-section"));
+      allSection.forEach(section => section.classList.remove("active"));
       
       // عرض القسم المستهدف
       const target = a.getAttribute("href").split("#")[1];
-      document.querySelector("#" + target).classList.add("active");
+      const targetSection = document.querySelector("#" + target);
+      if (targetSection) {
+        targetSection.classList.add("active");
+        console.log("تم تنشيط القسم:", target); // للتأكد من أن الكود يصل إلى هنا
+      } else {
+        console.error("لم يتم العثور على القسم المستهدف:", target);
+      }
       
       // إغلاق القائمة الجانبية على الأجهزة الصغيرة
       if (window.innerWidth < 1200) {
