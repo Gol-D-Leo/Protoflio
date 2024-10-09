@@ -14,26 +14,30 @@ const nav = document.querySelector(".nav"),
 
 for (let i = 0; i < totalNavList; i++) {
   const a = navList[i].querySelector("a");
-  a.addEventListener("click", function () {
-    for (let k = 0; k < totalSection; k++) {
-      allSection[k].classList.remove("back-section");
-    }
-    //Loop for removing active class
-    for (let j = 0; j < totalNavList; j++) {
-      if (navList[j].querySelector("a").classList.contains("active")) {
-        allSection[j].classList.add("back-section");
+  ['click', 'touchstart'].forEach(eventType => {
+    a.addEventListener(eventType, function (e) {
+      e.preventDefault(); // منع السلوك الافتراضي
+      for (let k = 0; k < totalSection; k++) {
+        allSection[k].classList.remove("back-section");
       }
-      navList[j].querySelector("a").classList.remove("active");
-    }
-    //Adding active class
-    this.classList.add("active");
-    showSection(this); //Function call
-    //Nav click event - Hiding the nav menu
-    if (window.innerWidth < 1200) {
-      asideSectionTogglerBtn();
-    }
+      //Loop for removing active class
+      for (let j = 0; j < totalNavList; j++) {
+        if (navList[j].querySelector("a").classList.contains("active")) {
+          allSection[j].classList.add("back-section");
+        }
+        navList[j].querySelector("a").classList.remove("active");
+      }
+      //Adding active class
+      this.classList.add("active");
+      showSection(this); //Function call
+      //Nav click event - Hiding the nav menu
+      if (window.innerWidth < 1200) {
+        asideSectionTogglerBtn();
+      }
+    });
   });
 }
+
 function showSection(element) {
   //Loop for removing active class
   for (let k = 0; k < totalSection; k++) {
