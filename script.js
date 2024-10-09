@@ -1,5 +1,5 @@
 var typed = new Typed(".typing", {
-  strings: ["Programmer", "GameDv", "Scripter"],
+  strings: ["Programmer", "Cybersecurity", "Scripter"],
   typeSpeed: 100,
   BackSpeed: 60,
   loop: true,
@@ -73,3 +73,4 @@ function asideSectionTogglerBtn() {
   aside.classList.toggle("open");
   navTogglerBtn.classList.toggle("open");
 }
+
