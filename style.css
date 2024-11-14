@@ -756,7 +756,7 @@ ul {
   align-items: center;
   transition: all 0.3s ease;
   background-color: #000000ef;
-  border-right: 2px solid #00ff00;
+  border-right: 2px solid  #2288BF;
   border-top-right-radius: 50px;
 }
 
@@ -765,7 +765,7 @@ ul {
   top: 50px;
   font-size: 30px;
   text-transform: capitalize;
-  text-shadow: 5px 4px 10px #00ff00;
+  text-shadow: 5px 4px 10px  #2288BF;
 }
 
 .aside .logo a {
