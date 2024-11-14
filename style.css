@@ -737,7 +737,8 @@ ul {
 }
 
 .shadow-dark {
-  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+  box-shadow: 0 0 20px rgba(58, 73, 89, 0.15)
+;
 }
 
 /* Global CSS End */
@@ -1164,7 +1165,8 @@ h3.my-profession {
 }
 
 .education .education-item .education-item-inner:hover {
-  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+  box-shadow: 0 0 20px rgba(58, 73, 89, 0.15)
+;
 }
 
 .education .education-item .education-item-inner .icon {
@@ -1389,7 +1391,8 @@ h3.my-profession {
 }
 
 .contact .contact-form .form-item .form-control:focus {
-  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+  box-shadow: 0 0 20px rgba(58, 73, 89, 0.15)
+;
 }
 
 .contact .contact-form .form-item textarea.form-control {
