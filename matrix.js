@@ -45,7 +45,7 @@ function updateMatrix() {
   ctx.fillRect(0, 0, canvasWidth, canvasHeight);
 
   // Set the text color and font
-  ctx.fillStyle = "#00ff00";
+  ctx.fillStyle = "#2288BF";
   ctx.font = "12px monospace";
 
   // Loop through each column
