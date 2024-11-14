@@ -166,7 +166,8 @@ ul {
 }
 
 .shadow-dark {
-  box-shadow: 0 0 20px rgba(0, 255, 0, 0.15);
+  box-shadow: 0 0 20px rgba(58, 73, 89, 0.15)
+;
 }
 
 /* Global CSS End */
