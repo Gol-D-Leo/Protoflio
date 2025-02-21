@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Developer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="index.css" rel="stylesheet">
+</head>
+<body class="bg-[#0a0a0a] text-gray-100 font-inter overflow-x-hidden">
+    <nav class="fixed w-full z-50 bg-black/80 backdrop-blur-sm border-b border-[#00ff88]/20">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <a href="#" class="text-xl font-press-start text-[#00ff88] hover:text-[#00ff88]/80 transition-colors">[Leo]</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="font-press-start text-sm hover:text-[#00ff88] transition-colors hover:scale-110">SAVE_POINT</a>
+                    <a href="#projects" class="font-press-start text-sm hover:text-[#00ff88] transition-colors hover:scale-110">QUESTS</a>
+                    <a href="#skills" class="font-press-start text-sm hover:text-[#00ff88] transition-colors hover:scale-110">STATS</a>
+                    <a href="#contact" class="font-press-start text-sm hover:text-[#00ff88] transition-colors hover:scale-110">MULTIPLAYER</a>
+                </div>
+                <button class="md:hidden text-[#00ff88]" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-16 6h16"></path>
+                    </svg>
+                </button>
+            </div>
+            <div id="mobileMenu" class="hidden md:hidden bg-black/95 p-4 rounded-lg mt-2">
+                <a href="#home" class="block font-press-start text-sm hover:text-[#00ff88] py-2">SAVE_POINT</a>
+                <a href="#projects" class="block font-press-start text-sm hover:text-[#00ff88] py-2">QUESTS</a>
+                <a href="#skills" class="block font-press-start text-sm hover:text-[#00ff88] py-2">STATS</a>
+                <a href="#contact" class="block font-press-start text-sm hover:text-[#00ff88] py-2">MULTIPLAYER</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="pixel-characters"></div>
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1538481199705-c710c4e965fc')] bg-cover bg-center opacity-20"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+        <div class="container mx-auto px-4 z-10">
+            <div class="text-center">
+                <img src="https://tr.rbxcdn.com/180DAY-1e545fb90b2351536a51e3dc8af253ac/420/420/Hat/Webp/noFilter" alt="Profile" class="w-32 h-32 mx-auto rounded-full border-4 border-[#00ff88] mb-8 glow-effect floating-element">
+                <h1 class="text-4xl md:text-6xl font-press-start mb-4 text-[#00ff88] animate-pulse glow-text">LEVEL 1</h1>
+                <p class="text-xl mb-8 font-press-start text-gray-400 typewriter">Game Developer | Code Alchemist</p>
+                <button onclick="document.getElementById('projects').scrollIntoView({behavior: 'smooth'})" class="bg-[#00ff88] text-black px-8 py-4 rounded font-press-start hover:bg-[#00ff88]/80 transition-all hover:scale-105 inline-block cursor-pointer glow-button">START GAME</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-20 bg-black/50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-press-start text-center mb-16 text-[#00ff88]">CURRENT QUESTS</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-black/80 p-6 rounded-lg border border-[#00ff88]/20 hover:border-[#00ff88] transition-all hover:scale-105 cursor-pointer group">
+                    <img src="Blood.webp" alt="Game Project 1" class="w-full h-48 object-cover rounded mb-4 group-hover:opacity-80 transition-opacity">
+                    <h3 class="text-xl font-press-start mb-2 text-[#00ff88]">BALANTA_OF_BLOOD</h3>
+                    <p class="text-gray-400">Level: Advanced | XP: 5000</p>
+                </div>
+                <div class="bg-black/80 p-6 rounded-lg border border-[#00ff88]/20 hover:border-[#00ff88] transition-all hover:scale-105 cursor-pointer group">
+                    <img src="BlueBunny.png" alt="Game Project 2" class="w-full h-48 object-cover rounded mb-4 group-hover:opacity-80 transition-opacity">
+                    <h3 class="text-xl font-press-start mb-2 text-[#00ff88]">BLUE_BUNNY</h3>
+                    <p class="text-gray-400">Level: Intermediate | XP: 3000</p>
+                </div>
+                <div class="bg-black/80 p-6 rounded-lg border border-[#00ff88]/20 hover:border-[#00ff88] transition-all hover:scale-105 cursor-pointer group">
+                    <img src="https://i.pinimg.com/originals/75/31/44/753144e879bfcbf926a4133dd98d7181.gif" alt="Game Project 3" class="w-full h-48 object-cover rounded mb-4 group-hover:opacity-80 transition-opacity">
+                    <h3 class="text-xl font-press-start mb-2 text-[#00ff88]">PIXEL_DREAMS</h3>
+                    <p class="text-gray-400">Level: Beginner | XP: 1000</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="py-20 bg-black">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-press-start text-center mb-16 text-[#00ff88]">CHARACTER STATS</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="skill-bar bg-black/50 p-6 rounded-lg border border-[#00ff88]/20">
+                    <div class="flex justify-between mb-2 font-press-start text-sm">
+                        <span>Godot</span>
+                        <span class="text-[#00ff88]">80 HP</span>
+                    </div>
+                    <div class="h-4 bg-gray-800 rounded-full overflow-hidden">
+                        <div class="bg-[#00ff88] h-2.5 rounded-full" style="width: 80%"></div>
+                    </div>
+                </div>
+                <div class="skill-bar bg-black/50 p-6 rounded-lg border border-[#00ff88]/20">
+                    <div class="flex justify-between mb-2 font-press-start text-sm">
+                        <span>Unreal Engine</span>
+                        <span class="text-[#00ff88]">0 HP</span>
+                    </div>
+                    <div class="w-full bg-gray-700 rounded-full h-2.5">
+                        <div class="bg-[#00ff88] h-2.5 rounded-full" style="width: 0%"></div>
+                    </div>
+                </div>
+                <div class="skill-bar bg-black/50 p-6 rounded-lg border border-[#00ff88]/20">
+                    <div class="flex justify-between mb-2 font-press-start text-sm">
+                        <span>C++</span>
+                        <span class="text-[#00ff88]">10 HP</span>
+                    </div>
+                    <div class="h-4 bg-gray-800 rounded-full overflow-hidden">
+                        <div class="bg-[#00ff88] h-2.5 rounded-full" style="width: 10%"></div>
+                    </div>
+                </div>
+                <div class="skill-bar bg-black/50 p-6 rounded-lg border border-[#00ff88]/20">
+                    <div class="flex justify-between mb-2 font-press-start text-sm">
+                        <span>Game Design</span>
+                        <span class="text-[#00ff88]">88 HP</span>
+                    </div>
+                    <div class="h-4 bg-gray-800 rounded-full overflow-hidden">
+                        <div class="bg-[#00ff88] h-2.5 rounded-full" style="width: 88%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 bg-black/50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-press-start text-center mb-16 text-[#00ff88]">MULTIPLAYER ZONE</h2>
+            <div class="flex justify-center space-x-8">
+                <a href="https://www.instagram.com/yre3n/" class="social-link group">
+                    <div class="bg-black p-6 rounded-lg border border-[#00ff88]/20 hover:border-[#00ff88] transition-all hover:scale-110 flex flex-col items-center">
+                        <img src="https://art.pixilart.com/63315db34457c11.png" alt="Instagram" class="w-16 h-16 mb-4 rounded">
+                        <span class="text-[#00ff88] font-press-start text-sm">Instagram</span>
+                    </div>
+                </a>
+                <a href="https://github.com/Gol-D-Leo" class="social-link group">
+                    <div class="bg-black p-6 rounded-lg border border-[#00ff88]/20 hover:border-[#00ff88] transition-all hover:scale-110 flex flex-col items-center">
+                        <img src="https://ih1.redbubble.net/image.3082652016.7312/raf,360x360,075,t,fafafa:ca443f4786.u2.jpg" alt="Github" class="w-16 h-16 mb-4 rounded">
+                        <span class="text-[#00ff88] font-press-start text-sm">Github</span>
+                    </div>
+                </a>
+                <a href="https://discord.gg/YnZDYxetQU"" class="social-link group">
+                    <div class="bg-black p-6 rounded-lg border border-[#00ff88]/20 hover:border-[#00ff88] transition-all hover:scale-110 flex flex-col items-center">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-Gs1qUsuuCGNduH1J_MoHggUchmuZKXiQ4g&s" alt="Discord" class="w-16 h-16 mb-4 rounded">
+                        <span class="text-[#00ff88] font-press-start text-sm">Discord</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
